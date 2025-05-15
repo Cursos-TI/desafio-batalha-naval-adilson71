@@ -14,28 +14,28 @@ int main() {
     int navio_horizontal[NAVIO_TAM] = {3, 3, 3};
     int navio_vertical[NAVIO_TAM] = {3, 3, 3};
 
-    // 1. Inicializar o tabuleiro 
+    //  tabuleiro 
     for (int i = 0; i < TAM; i++) {
         for (int j = 0; j < TAM; j++) {
             tabuleiro[i][j] = 0;
         }
     }
 
-    // 2. Posicionar navio horizontal 
+    // 2. Posição do navio horizontal 
     int linha_h = 0;
     int coluna_h_inicio = 1;
     for (int i = 0; i < NAVIO_TAM; i++) {
         tabuleiro[linha_h][coluna_h_inicio + i] = navio_horizontal[i];
     }
 
-    // 3. Posicionar navio vertical 
+    // 3. Posição do navio vertical 
     int coluna_v = 9;
     int linha_v_inicio = 7;
     for (int i = 0; i < NAVIO_TAM; i++) {
         tabuleiro[linha_v_inicio + i][coluna_v] = navio_vertical[i];
     }
 
-    // 4. Imprimir o tabuleiro
+    // 4. Impressão do tabuleiro
     printf("Tabuleiro Batalha Naval :\n\n");
 
     for (int i = 0; i < TAM; i++) {
